@@ -20,7 +20,7 @@
  *     To do so, collect data from your users. Values within :colons: are (formatted) user-inputs;
  *     values within <angle brackets> have to be calculated by your software.
  *
- *     You - 2026-03-05
+ *     Ronja Holler - 2026-03-05
  *******************************************************/
 
 /*
@@ -31,6 +31,34 @@
 const LINE = "-----------------------------------------------------";
 let bmr, bmi, normal, danger;
 
+let firstname = prompt("Gib deinen Vornamen ein: ");
+let lastname = prompt("Gib deinen Nachnamen ein: ");
+let age = Number(prompt("Gib dein Alter ein (Jahre): "));
+let height = Number(prompt("Gib deine Größe ein (cm): "));
+let weight = Number(prompt ("Gib dein Gewicht ein (kg): "));
+
+let gender = prompt ("Gib dein Geschlecht ein (männlich/weiblich): ");
+while (gender !== "weiblich" && gender !== "männlich"){
+    gender = prompt("männlich oder weiblich eingeben!");
+}
+if (gender === "weiblich") {
+    bmr = 655 + (10 * weight) + (2 * height) - (6 * age);
+} else{
+    bmr = 66 +(14*weight) + (5 * height) - (7 * age);
+}
+
+bmi = (10000 * weight) / (height * height);
+
+if (bmi >= 18 && bmi <= 25){
+    normal = "Ja";
+} else {
+    normal = "Nein";
+}
+if (bmi <= 16 && bmi >= 30){
+    danger = "Ja";
+} else {
+    danger = "Nein";
+}
 /**
  * Formulas:
  *
@@ -72,6 +100,16 @@ let bmr, bmi, normal, danger;
  */
 
 console.log(LINE); // Logs the dashed-line.
+console.log("Name: "+ lastname + "," +firstname);
+console.log(LINE);
+console.log("Alter: "+ age +"Jahre");
+console.log("Größe: "+ height +"cm");
+console.log("Gewicht: "+ weight + "kg");
+console.log("Basal Metabolic Rate (BMR): " + bmr + "kcal");
+console.log("Body Mass Index (BMI): "+ bmi);
+console.log("Normales Gewicht: " + normal);
+console.log("Gefahr: " + danger);
+console.log(LINE);
 
 /*
  * TODO: Make sure to TEST YOUR SOFTWARE! Does it work, when People are smaller than 1 meter? Or taller than 2?
