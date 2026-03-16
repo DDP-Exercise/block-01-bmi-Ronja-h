@@ -100,15 +100,15 @@ if (bmi <= 16 && bmi >= 30){
  */
 
 console.log(LINE); // Logs the dashed-line.
-console.log("Name: "+ lastname + "," +firstname);
+console.log("Name: \t\t\t"+ lastname + "," +firstname);
 console.log(LINE);
-console.log("Alter: "+ age +"Jahre");
-console.log("Größe: "+ height +"cm");
-console.log("Gewicht: "+ weight + "kg");
-console.log("Basal Metabolic Rate (BMR): " + bmr + "kcal");
-console.log("Body Mass Index (BMI): "+ bmi);
-console.log("Normales Gewicht: " + normal);
-console.log("Gefahr: " + danger);
+console.log("Alter:\t\t\t"+ age +" Jahre");
+console.log("Größe: \t\t\t"+ height +"cm");
+console.log("Gewicht: \t\t"+ weight + "kg");
+console.log("Basal Metabolic Rate: \t" + bmr + "kcal");
+console.log("Body Mass Index (BMI):\t"+ bmi);
+console.log("Normales Gewicht: \t" + normal);
+console.log("Gefahr: \t\t" + danger);
 console.log(LINE);
 
 /*
